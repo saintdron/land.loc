@@ -86,7 +86,7 @@ $(document).ready(function() {
         if (winWidth > 1024) {
             columnNumb = 4;
         } else if (winWidth > 900) {
-            columnNumb = 2;
+            columnNumb = 3;
         } else if (winWidth > 479) {
             columnNumb = 2;
         } else if (winWidth < 479) {
@@ -118,7 +118,7 @@ $(document).ready(function() {
     });
 
 
-    $(window).bind('resize', function() {
+    $(window).on('resize', function() {
         setProjects();
     });
 
