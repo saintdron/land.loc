@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 use App\Page;
 use App\Service;
 use App\Portfolio;
 use App\People;
-
 
 class IndexController extends Controller
 {
@@ -19,6 +19,7 @@ class IndexController extends Controller
 		$services = Service::where('id', '<', 20)->get();
 		$portfolios = Portfolio::get(['name', 'filter', 'images']);
 		$peoples = People::take(3)->get();
+		$tags = DB::table('portfolios')->distinct()->pluck('filter');
 
 		$menu = [];
 		foreach ($pages as $page)
@@ -32,14 +33,13 @@ class IndexController extends Controller
 				 ];
 		$menu = array_merge($menu, $items);
 
-		//dd($menu);
-
 		return view('index', [
 								'pages' => $pages,
 								'services' => $services,
 								'portfolios' => $portfolios,
 								'peoples' => $peoples,
 								'menu' => $menu,
+								'tags' => $tags,
 							 ]);
 	}
 }
