@@ -1,5 +1,3 @@
-<!--{{ dump(gettype($tags)) }}-->
-
 @if(isset($pages) && is_object($pages))
 	@foreach($pages as $k => $page)
 		@if($k % 2 === 0)
@@ -242,10 +240,13 @@
 				</div>
 				<div class="col-lg-8 wow fadeInLeft delay-06s">
 					<div class="form">
-						<input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-						<input class="input-text" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-						<textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-						<input class="input-btn" type="submit" value="send message">
+						<form action="{{ route('home') }}" method='post'>
+							<input class="input-text" type="text" name="name" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+							<input class="input-text" type="text" name="email" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+							<textarea class="input-text text-area" name="text" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
+							<input class="input-btn" type="submit" value="send message">
+							@csrf
+						</form>
 					</div>
 				</div>
 			</div>
