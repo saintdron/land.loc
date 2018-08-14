@@ -83,7 +83,7 @@
 @endif
 
 
-@if(isset($portfolios) && is_object($portfolios))
+@if(isset($portfolio) && is_object($portfolio))
 <!--Portfolio-->
 <section id="portfolio" class="content">
 	<div class="container portfolio_title">
@@ -118,7 +118,7 @@
 
 		<!-- Portfolio Wrapper -->
 		<div class="isotope fadeInLeft wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
-			@foreach($portfolios as $item)
+			@foreach($portfolio as $item)
 			<div class="portfolio-item one-four isotope-item {{ $item->filter }}">
 				<div class="portfolio_img">
 					{{ Html::image(asset('assets/img/'.$item->images), $item->name) }}
@@ -202,17 +202,6 @@
 		<section class="page_section contact" id="contact">
 			<div class="contact_section">
 				<h2>Contact Us</h2>
-				<div class="row">
-					<div class="col-lg-4">
-
-					</div>
-					<div class="col-lg-4">
-
-					</div>
-					<div class="col-lg-4">
-
-					</div>
-				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 wow fadeInLeft">
@@ -230,12 +219,19 @@
 							<p>support@sitename.com</p>
 						</div>
 					</div>
-
 					<ul class="social_links">
-						<li class="twitter bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-						<li class="facebook bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-						<li class="pinterest bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a></li>
-						<li class="gplus bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
+						<li class="twitter bounceIn wow delay-02s">
+							<a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
+						</li>
+						<li class="facebook bounceIn wow delay-03s">
+							<a href="javascript:void(0)"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li class="pinterest bounceIn wow delay-04s">
+							<a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a>
+						</li>
+						<li class="gplus bounceIn wow delay-05s">
+							<a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a>
+						</li>
 					</ul>
 				</div>
 				<div class="col-lg-8 wow fadeInLeft delay-06s">
@@ -254,6 +250,9 @@
 		<!--Contact-->
 	</div>
 	<div class="container">
-		<div class="footer_bottom"><span>Copyright © 2014, Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
+		<div class="footer_bottom">
+			<span>Copyright © 2014, Template by <a href="http://webthemez.com">WebThemez.com</a>.</span>
+		</div>
 	</div>
 </footer>
+<!--Footer-->

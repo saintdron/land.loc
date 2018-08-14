@@ -40,9 +40,9 @@ class IndexController extends Controller
 
 		$pages = Page::all();
 		$services = Service::where('id', '<', 20)->get();
-		$portfolios = Portfolio::get(['name', 'filter', 'images']);
+		$portfolio = Portfolio::get(['name', 'filter', 'images']);
 		$peoples = People::take(3)->get();
-		$tags = DB::table('portfolios')->distinct()->pluck('filter');
+		$tags = DB::table('portfolio')->distinct()->pluck('filter');
 
 		$menu = [];
 		foreach ($pages as $page)
@@ -59,7 +59,7 @@ class IndexController extends Controller
 		return view('index', [
 								'pages' => $pages,
 								'services' => $services,
-								'portfolios' => $portfolios,
+								'portfolio' => $portfolio,
 								'peoples' => $peoples,
 								'menu' => $menu,
 								'tags' => $tags,
