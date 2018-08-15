@@ -242,13 +242,13 @@
                         <form action="{{ route('home') }}" method='post'>
                             <input class="input-text" type="text" name="name" value="Your Name *"
                                    onFocus="if(this.value===this.defaultValue)this.value='';"
-                                   onBlur="if(this.value=='')this.value=this.defaultValue;">
+                                   onBlur="if(this.value==='')this.value=this.defaultValue;">
                             <input class="input-text" type="text" name="email" value="Your E-mail *"
                                    onFocus="if(this.value===this.defaultValue)this.value='';"
-                                   onBlur="if(this.value=='')this.value=this.defaultValue;">
+                                   onBlur="if(this.value==='')this.value=this.defaultValue;">
                             <textarea class="input-text text-area" name="text" cols="0" rows="0"
                                       onFocus="if(this.value===this.defaultValue)this.value='';"
-                                      onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
+                                      onBlur="if(this.value==='')this.value=this.defaultValue;">Your Message *</textarea>
                             <input class="input-btn" type="submit" value="send message">
                             @csrf
                         </form>
