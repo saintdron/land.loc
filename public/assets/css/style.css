@@ -26,6 +26,7 @@ img {
 a, a:hover, a:active {
     outline: 0px !important;
 }
+
 .clear {
     clear: both;
     display: block;
@@ -34,6 +35,7 @@ a, a:hover, a:active {
     width: 0;
     height: 0;
 }
+
 .clearfix:before,
 .clearfix:after {
     content: '\0020';
@@ -47,7 +49,6 @@ a, a:hover, a:active {
 .clearfix:after {
     clear: both;
 }
-
 
 /* Styles
 ---------------------------------*/
@@ -107,14 +108,13 @@ p {
 .logo {
     float: left;
     margin-top: 8px;
-	position: relative;
-	z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .res-nav_click {
     display: none;
 }
-
 
 /* Nav Styles
 ---------------------------------*/
@@ -148,7 +148,7 @@ p {
 }
 
 .navStyle ul li:first-child {
-	/*margin:0px;*/;
+    /*margin:0px;*/;
 }
 
 .navStyle ul li:last-child {
@@ -207,6 +207,7 @@ p {
 .mrgTop {
     margin-top: 30px;
 }
+
 /* Top_content
 ---------------------------------*/
 
@@ -289,14 +290,6 @@ a.read_more2:hover {
     border: 1px solid #fff;
 }
 
-
-
-
-
-
-
-
-
 /* Services
 ---------------------------------*/
 
@@ -325,7 +318,7 @@ a.read_more2:hover {
     height: 90px;
     margin: 0px auto 25px;
 
-	padding-top: 3px;
+    padding-top: 3px;
 }
 
 .service_icon.icon2 {
@@ -367,11 +360,8 @@ a.read_more2:hover {
     margin: 0px;
 }
 
-
-
 /* Latest Work
 ---------------------------------*/
-
 
 #work_outer {
     background: #f9f9f9;
@@ -457,10 +447,8 @@ a.contact_btn:hover {
     background: transparent;
 }
 
-
 /* Portfolio
 ---------------------------------*/
-
 
 #Portfolio {
     padding: 60px 0px;
@@ -536,7 +524,7 @@ img {
 /* no transition on .isotope container */
 
 .isotope .isotope-item {
-  /* change duration value to whatever you like */
+    /* change duration value to whatever you like */
     -webkit-transition-duration: 0.6s;
     -moz-transition-duration: 0.6s;
     transition-duration: 0.6s;
@@ -552,11 +540,8 @@ img {
     padding-bottom: 60px;
 }
 
-
 /* Happy Clients
 ---------------------------------*/
-
-
 
 #clients {
     padding: 60px 0px;
@@ -612,7 +597,6 @@ img {
 /* Clients
 ---------------------------------*/
 
-
 .client_logos {
     background: #df0031;
     padding: 60px 0;
@@ -643,8 +627,6 @@ img {
 .page_section.team h6 {
     margin-bottom: 40px;
 }
-
-
 
 /* Team
 ---------------------------------*/
@@ -698,7 +680,7 @@ img {
 }
 
 .team_box:hover .team_box_shadow {
-    box-shadow: inset  0px 0px 0px 148px rgba(17,17,17,0.80);
+    box-shadow: inset 0px 0px 0px 148px rgba(17, 17, 17, 0.80);
 }
 
 .team_box:hover ul {
@@ -859,7 +841,7 @@ img {
     padding-left: 0;
 }
 
-.contact_info  h3 {
+.contact_info h3 {
     font-size: 24px;
     font-weight: 600;
     margin: 0 0 30px;
@@ -875,7 +857,7 @@ img {
 }
 
 .social_links {
-    padding:0;
+    padding: 0;
     margin: 0;
     display: block;
     overflow: hidden;
@@ -917,7 +899,6 @@ img {
 .gplus a:hover {
     color: #dd4b39;
 }
-
 
 .form {
     margin: 0 66px 0 30px;
@@ -1058,11 +1039,7 @@ img {
     -webkit-animation-delay: 1.2s;
 }
 
-
 /*new_profolio*/
-
-
-
 
 /* Portfolio */
 
@@ -1073,8 +1050,6 @@ img {
 #portfolio {
     padding: 60px 0 40px;
 }
-
-
 
 /* Portfolio Filters */
 
@@ -1133,14 +1108,12 @@ img {
 .section-title span {
     display: block;
     color: #888888;
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 400;
     margin: 0 0 60px;
     text-align: center;
 }
-
-
 
 /* Portfolio Items */
 
@@ -1153,7 +1126,7 @@ img {
 }
 
 #portfolio_wrapper .one-four {
-    margin: 0!important;
+    margin: 0 !important;
     line-height: 0;
     width: 25%;
     padding: 0;
@@ -1165,12 +1138,12 @@ img {
     position: relative;
     overflow: hidden;
 
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
-	width: 337px;
-	opacity: 1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+    width: 337px;
+    opacity: 1;
 }
 
 .portfolio-item .portfolio_img {
@@ -1300,9 +1273,6 @@ img {
     transition: opacity .3s .2s, margin-top .3s .2s;
 }
 
-
-
-
 /* Portfolio Isotope Transitions */
 
 .isotope, .isotope .isotope-item {
@@ -1337,11 +1307,7 @@ img {
     transition-duration: 0s;
 }
 
-
-
 /* Portfolio Expander */
-
-
 
 #project_container {
     display: none;
@@ -1399,7 +1365,7 @@ img {
 }
 
 .project-section-title h1 {
-    margin-bottom: 5px!important;
+    margin-bottom: 5px !important;
     letter-spacing: 1px;
     font-family: 'Raleway', sans-serif;
 }
@@ -1412,9 +1378,7 @@ img {
     padding-bottom: 40px;
 }
 
-
 /* Portfolio*/
-
 
 .project-image-slider .bx-wrapper .bx-next {
     background: url("images/project_slider_right.png") no-repeat;
@@ -1475,8 +1439,6 @@ img {
     text-transform: uppercase;
     margin-bottom: 5px;
 }
-
-
 
 /* Portfolio FullScreen Expander */
 
@@ -1625,101 +1587,126 @@ div.mc-image {
 --------------------------- */
 @media (min-width: 768px) {
 
+}
 
-}
 @media (max-width: 768px) {
-p{
-font-size:14px;
-}
-.home_section {
-position: relative;
-padding-top: 10px;
-}
-.top_left_cont {
-padding: 38px 0;
-}
-.top_left_cont h2 {
-font-size: 25px;
-color: #FFF;
-line-height: 39px;
-margin: 0 0 9px 0;
-}
-.inner_section {
-padding: 20px 0 20px;
-}
-#aboutUs img{
-margin-bottom:20px;
-}
-#aboutUs h3{
-font-size:16px;
-line-height:22px;
-}
-.service_block h3 {
-font-size: 16px;
-}
-service_block p {
-font-size: 14px;
-margin: 0px;
-margin-bottom: 20px;
-}
-#filters ul{
-padding-left:0px;
-}
-.form {
-margin: 0 18px;
-}
-.page_section.team{
-padding: 40px 0;
-}
+    p {
+        font-size: 14px;
+    }
+
+    .home_section {
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .top_left_cont {
+        padding: 38px 0;
+    }
+
+    .top_left_cont h2 {
+        font-size: 25px;
+        color: #FFF;
+        line-height: 39px;
+        margin: 0 0 9px 0;
+    }
+
+    .inner_section {
+        padding: 20px 0 20px;
+    }
+
+    #aboutUs img {
+        margin-bottom: 20px;
+    }
+
+    #aboutUs h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .service_block h3 {
+        font-size: 16px;
+    }
+
+    service_block p {
+        font-size: 14px;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    #filters ul {
+        padding-left: 0px;
+    }
+
+    .form {
+        margin: 0 18px;
+    }
+
+    .page_section.team {
+        padding: 40px 0;
+    }
+
 , #clients {
-padding: 40px 0;
+      padding: 40px 0;
+  }
+
+    .client_logos ul li {
+        display: inline;
+        margin: 0 25px;
+        padding: 11px 0;
+        display: inline-block;
+    }
+
+    .social_links li {
+        float: left;
+    }
+
+    .contact_section {
+        margin: 0;
+    }
+
+    h2, .contact_section h2 {
+        font-size: 30px;
+    }
+
+    .page_section.contact {
+        padding: 60px 0 50px;
+    }
+
+    .navbar-inverse .navbar-toggle .icon-bar {
+        background: #df0031;
+    }
+
+    .navbar-inverse .navbar-toggle {
+        border-color: transparent;
+    }
+
+    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+        background: none;
+        outline: none;
+    }
+
+    .navStyle ul li {
+        display: block;
+    }
+
+    .navStyle {
+        float: right;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navStyle ul li:last-child {
+        margin: 0px;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #222;
+        background: #F9F9F9;
+    }
 }
-.client_logos ul li {
-display: inline;
-margin: 0 25px;
-padding: 11px 0;
-display: inline-block;
-}
-.social_links li {
-float: left;
-}
-.contact_section{
-margin:0;
-}
-h2, .contact_section h2 {
-font-size: 30px;
-}
-.page_section.contact {
-padding: 60px 0 50px;
-}
-.navbar-inverse .navbar-toggle .icon-bar{
-background:#df0031;
-}
-.navbar-inverse .navbar-toggle {
-border-color: transparent;
-}
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
-background:none;
-outline: none;
-}
-.navStyle ul li {
-display: block;
-}
-.navStyle {
-float: right;
-width: 100%;
-text-align:center;
-}
-.navStyle ul li:last-child {
-margin: 0px;
-}
-.navbar-inverse .navbar-nav > li > a {
-color: #222;
-background: #F9F9F9;
-}
-}
-@media (max-width: 480px){
-.team_area {
-width: 99%;
-}
+
+@media (max-width: 480px) {
+    .team_area {
+        width: 99%;
+    }
 }

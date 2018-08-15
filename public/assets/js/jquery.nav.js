@@ -17,7 +17,7 @@
  * });
  */
 
-; (function ($, window, document, undefined) {
+;(function ($, window, document, undefined) {
 
     // our plugin constructor
     var OnePageNav = function (elem, options) {
@@ -40,7 +40,7 @@
             changeHash: false,
             easing: 'swing',
             filter: '',
-			navHeight: 70,
+            navHeight: 70,
             scrollSpeed: 750,
             scrollThreshold: 0.5,
             begin: false,

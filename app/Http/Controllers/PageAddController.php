@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TempController extends Controller
+class PageAddController extends Controller
 {
     //
+    public function execute() {    }
 }
