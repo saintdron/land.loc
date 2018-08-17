@@ -14,55 +14,56 @@ use App\People;
 class IndexController extends Controller
 {
     //
-	public function execute(Request $request) {
+    public function execute(Request $request)
+    {
 
-		if ($request->isMethod('post')) {
+        if ($request->isMethod('post')) {
 
-			$this->validate($request, [
-				'name' => 'required|max:255',
-				'email' => 'required|email',
-				'text' => 'required'
-			], [
+            $this->validate($request, [
+                'name' => 'required|max:255',
+                'email' => 'required|email',
+                'text' => 'required'
+            ], [
 //				'required' => 'Поле :attribute обязательно к заполнению',
 //				'email' => 'Поле :attribute должно соответствовать email адресу',
-			]);
+            ]);
 
-			$data = $request->all();
-			$result = Mail::send('site.email', ['data' => $data], function($message) use ($data) {
-				$mail_admin = env('MAIL_ADMIN');
-				$message->from($data['email'], $data['name']);
-				$message->to($mail_admin, 'Mr. Admin')->subject('Question');
-			});
+            $data = $request->all();
+            $result = Mail::send('site.email', ['data' => $data], function ($message) use ($data) {
+                $mail_admin = env('MAIL_ADMIN');
+                $message->from($data['email'], $data['name']);
+                $message->to($mail_admin, 'Mr. Admin')->subject('Question');
+            });
 //			if ($result) {
-				return redirect()->route('home')->with('status', 'Email is send');
+            return redirect()->route('home')->with('status', 'Email is send');
 //			}
-		}
+        }
 
-		$pages = Page::all();
-		$services = Service::where('id', '<', 20)->get();
-		$portfolio = Portfolio::get(['name', 'filter', 'images']);
-		$peoples = People::take(3)->get();
-		$tags = DB::table('portfolio')->distinct()->pluck('filter');
+        $pages = Page::all();
+        $services = Service::where('id', '<', 20)->get();
+        $portfolio = Portfolio::get(['name', 'filter', 'images']);
+        $peoples = People::take(3)->get();
+        $tags = DB::table('portfolio')->distinct()->pluck('filter');
 
-		$menu = [];
-		foreach ($pages as $page)
-			array_push($menu, ['title' => $page->name, 'alias' => $page->alias]);
-		$items = [
-					['title' => 'services', 'alias' => 'service'],
-					['title' => 'portfolio', 'alias' => 'portfolio'],
-					['title' => 'clients', 'alias' => 'clients'],
-					['title' => 'team', 'alias' => 'team'],
-					['title' => 'contact us', 'alias' => 'contact']
-				 ];
-		$menu = array_merge($menu, $items);
+        $menu = [];
+        foreach ($pages as $page)
+            array_push($menu, ['title' => $page->name, 'alias' => $page->alias]);
+        $items = [
+            ['title' => 'services', 'alias' => 'service'],
+            ['title' => 'portfolio', 'alias' => 'portfolio'],
+            ['title' => 'clients', 'alias' => 'clients'],
+            ['title' => 'team', 'alias' => 'team'],
+            ['title' => 'contact us', 'alias' => 'contact']
+        ];
+        $menu = array_merge($menu, $items);
 
-		return view('index', [
-								'pages' => $pages,
-								'services' => $services,
-								'portfolio' => $portfolio,
-								'peoples' => $peoples,
-								'menu' => $menu,
-								'tags' => $tags,
-							 ]);
-	}
+        return view('index', [
+            'pages' => $pages,
+            'services' => $services,
+            'portfolio' => $portfolio,
+            'peoples' => $peoples,
+            'menu' => $menu,
+            'tags' => $tags,
+        ]);
+    }
 }

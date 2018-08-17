@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::match(['get', 'post'], '/add', ['uses' => 'PagesAddController@execute', 'as' => 'pagesAdd']);
 
         // admin/pages/edit/{page}
-        Route::match(['get', 'post', 'delete'], '/edit/{page}',
+        Route::match(['get', 'post', 'delete'], '/edit/{id}',
             ['uses' => 'PagesEditController@execute', 'as' => 'pagesEdit']);
     });
 
