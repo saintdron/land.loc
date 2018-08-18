@@ -30,9 +30,9 @@
                             {{ Form::open([
                                             'url' => route('pagesEdit', ['page' => $page->id]),
                                             'class' => 'form-horizontal',
-                                            'method' => 'post'
+                                            'method' => 'POST'
                                         ]) }}
-                            {{ Form::hidden('action', 'delete') }}
+                            {{ method_field('DELETE') }}
                             {{ Form::submit('Удалить', ['class' => 'btn btn-danger']) }}
                             {{ Form::close() }}
                         </td>
