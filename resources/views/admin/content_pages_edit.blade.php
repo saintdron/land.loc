@@ -1,1 +1,0 @@
-// TODO remove long names from blade tamplates
