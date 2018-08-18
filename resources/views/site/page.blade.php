@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                {!! link_to(route('home'), 'Back') !!}
+                {!! link_to(route('index'), 'Back') !!}
             </div>
         </div>
     </div>

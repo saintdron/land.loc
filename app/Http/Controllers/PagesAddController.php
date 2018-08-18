@@ -14,10 +14,12 @@ class PagesAddController extends Controller
             $request->validate([
                 'name' => 'required|max:100',
                 'alias' => 'required|unique:pages|max:100',
-                'text' => 'required'
+                'text' => 'required',
+                'images' => 'required'
             ], [
                 'name.required' => 'Поле "Название" обязательно для заполнения.',
                 'name.max' => 'Количество символов в поле "Название" не может превышать 100.',
+                'images.required' => 'Поле "Изображение" обязательно для заполнения.'
             ]);
 
             $input = $request->except('_token');

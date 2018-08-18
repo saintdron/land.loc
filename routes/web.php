@@ -11,7 +11,7 @@
 |
 */
 
-Route::match(['get', 'post'], '/', ['uses' => 'IndexController@execute', 'as' => 'home']);
+Route::match(['get', 'post'], '/', ['uses' => 'IndexController@execute', 'as' => 'index']);
 Route::get('/page/{alias}', ['uses' => 'PageController@execute', 'as' => 'page']);
 
 Route::auth();

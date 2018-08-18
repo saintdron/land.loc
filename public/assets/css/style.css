@@ -152,7 +152,7 @@ p {
 }
 
 .navStyle ul li:last-child {
-    margin: 0 0 0 23px;
+    margin: 0 23px 0 0;
 }
 
 .navStyle ul li a {
@@ -393,7 +393,7 @@ a.read_more2:hover {
 }
 
 .service-list-col1 i {
-    display:;
+    /*display:;*/
     color: #888;
     font-size: 19px;
     font-style: normal;
@@ -1645,9 +1645,9 @@ div.mc-image {
         padding: 40px 0;
     }
 
-, #clients {
-      padding: 40px 0;
-  }
+    #clients {
+        padding: 40px 0;
+    }
 
     .client_logos ul li {
         display: inline;

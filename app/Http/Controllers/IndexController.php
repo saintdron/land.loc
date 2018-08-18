@@ -35,7 +35,7 @@ class IndexController extends Controller
                 $message->to($mail_admin, 'Mr. Admin')->subject('Question');
             });
 //			if ($result) {
-            return redirect()->route('home')->with('status', 'Email is send');
+            return redirect()->route('index')->with('status', 'Email is send');
 //			}
         }
 
@@ -51,7 +51,6 @@ class IndexController extends Controller
         $items = [
             ['title' => 'services', 'alias' => 'service'],
             ['title' => 'portfolio', 'alias' => 'portfolio'],
-            ['title' => 'clients', 'alias' => 'clients'],
             ['title' => 'team', 'alias' => 'team'],
             ['title' => 'contact us', 'alias' => 'contact']
         ];
