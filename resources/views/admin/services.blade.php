@@ -13,6 +13,7 @@
                     <th>Иконка</th>
                     <th>Название</th>
                     <th>Текст</th>
+                    <th>Дата создания</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -22,7 +23,6 @@
                         <td>{!! Html::link(route('servicesEdit', $service->id), $service->name) !!}</td>
                         <td>{{ $service->text }}</td>
                         <td>{{ $service->created_at }}</td>
-                        <td>{{ $service->updated_at }}</td>
                         <td>
                             {{ Form::open([
                                             'url' => route('servicesEdit', ['page' => $service->id]),
