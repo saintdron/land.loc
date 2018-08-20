@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Page;
+use Validator;
 
 class PagesEditController extends Controller
 {
@@ -20,14 +21,17 @@ class PagesEditController extends Controller
 
             $input = $request->except('_token');
 
-            $request->validate([
+            $rules = [
                 'name' => 'required|max:100',
                 'alias' => 'required|max:100|unique:pages,alias,' . $input['id'],
                 'text' => 'required'
-            ], [
-                'name.required' => 'Поле "Название" обязательно для заполнения.',
-                'name.max' => 'Количество символов в поле "Название" не может превышать 100.',
-            ]);
+            ];
+            $attributeNames = [
+                'name' => '"Название"'
+            ];
+            $validator = Validator::make($request->all(), $rules);
+            $validator->setAttributeNames($attributeNames);
+            $validator->validate();
 
             if ($request->hasFile('images')) {
                 $file = $request->file('images');
@@ -44,7 +48,6 @@ class PagesEditController extends Controller
             }
         }
 
-//        $old = $page->toArray();
         if (view()->exists('admin.pages_edit')) {
             return view('admin.pages_edit', [
                 'title' => 'Редактирование страницы – ' . $page->name,

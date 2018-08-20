@@ -3,18 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Page;
+use App\Portfolio;
+use DB;
 use Validator;
 
-class PagesAddController extends Controller
+class PortfolioAddController extends Controller
 {
+    //
     public function execute(Request $request)
     {
         if ($request->isMethod('post')) {
             $rules = [
-                'name' => 'required|max:100',
-                'alias' => 'required|unique:pages|max:100',
-                'text' => 'required',
+                'name' => 'required|max:200',
                 'images' => 'required'
             ];
             $attributeNames = [
@@ -32,17 +32,18 @@ class PagesAddController extends Controller
                 $file->move(public_path('assets/img'), $input['images']);
             }
 
-            $page = new Page($input);
-            if ($page->save()) {
-                return redirect('admin')->with('status', 'Страница добавлена');
+            $portfolio = new Portfolio($input);
+            if ($portfolio->save()) {
+                return redirect('admin')->with('status', 'Работа добавлена');
             }
         }
 
-        if (view()->exists('admin.pages_add')) {
-            $data = [
-                'title' => 'Новая страница'
-            ];
-            return view('admin.pages_add', $data);
+        if (view()->exists('admin.portfolio_add')) {
+            $filters = DB::table('portfolio')->distinct()->pluck('filter');
+            return view('admin.portfolio_add', [
+                'title' => 'Новая работа',
+                'filters' => $filters
+            ]);
         }
 
         abort(404);

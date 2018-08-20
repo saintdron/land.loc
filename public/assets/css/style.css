@@ -1710,3 +1710,30 @@ div.mc-image {
         width: 99%;
     }
 }
+
+/*Dron
+---------------------------------------------------------*/
+
+.portfolio_preview {
+    max-width: 100px;
+}
+
+.combo-select {
+    position: relative;
+}
+
+.combo-select input {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 90%;
+    border: none;
+    background: transparent;
+    box-shadow: none !important;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.service_icon_preview {
+    font-size: 4rem !important;
+}
